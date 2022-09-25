@@ -1,8 +1,8 @@
 ### Entropy Weight Ensemble
 
-* The output file from Xrare, Examiner and deepPVP must prepare in advance;
+* The output file from Xrare, Examiner and deepPVP must be prepared in advance;
 
-* Preparing a set of example data from our first cohort in "example" fold;
+* We prepared a set of example data from our first cohort in "example" fold;
 
 * Sourcing "Combined2.R" and "EWE2.R" in R to ensemble Xrare and Exomiser results, for example:
 
