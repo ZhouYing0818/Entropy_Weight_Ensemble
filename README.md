@@ -7,8 +7,8 @@
 * Sourcing "Combined2.R" and "EWE2.R" in R to ensemble Xrare and Exomiser results, for example:
 
   ~~~
-  Source("Combined2.R")
-  Source("EWE2.R")
+  source("Combined2.R")
+  source("EWE2.R")
   EWE2_output<-Combined2(rootpath="./", 
                       xrare_path="./example/xrare/", #The path of Xrare output files
                       exo_path="./example/exo/" #The path of Exomiser output files
@@ -16,12 +16,12 @@
   write.csv(EWE2_output,"EWE2_output.csv",fileEncoding='GB18030') #saving combined results
   ~~~
 
-* Sourcing "Combined3.R" and "EWE3.R" in R to ensemble Xrare, Exomiser results, for example:
+* sourcing "Combined3.R" and "EWE3.R" in R to ensemble Xrare, Exomiser results, for example:
 
   ~~~
-  Source("Combined3.R")
-  Source("EWE3.R")
-  EWE3_output<-Combined2(rootpath="./", 
+  source("Combined3.R")
+  source("EWE3.R")
+  EWE3_output<-Combined3(rootpath="./", 
                       xrare_path="./example/xrare/", #The path of Xrare output files
                       exo_path="./example/exo/", #The path of Exomiser output files
                       deepPVP_path="./example/deepPVP/" #The path of deepPVP files
