@@ -13,7 +13,7 @@ Combined2<-function(rootpath="./",
     flag1=FALSE
     filename=paste(xrare_path,tmp_file,sep="")
     tmp_xrare<-read.csv(filename,header = T)
-    tmp_xrare<-tidyr::unite(tmp_xrare, "CHROM:POS", CHROM,POS,sep = ":")
+    tmp_xrare["CHROM:POS"]<-paste(tmp_xrare$CHROM,tmp_xrare$POS,sep = ":")
     flag1=TRUE
     break
   }
@@ -28,16 +28,15 @@ Combined2<-function(rootpath="./",
     tmp_colname<-colnames(tmp_exo)
     tmp_colname[1]<-"CHROM"
     colnames(tmp_exo)<-tmp_colname
-    tmp_exo<-tidyr::unite(tmp_exo, "CHROM:POS", CHROM,POS,sep = ":")
+    tmp_exo["CHROM:POS"]<-paste(tmp_exo$CHROM,tmp_exo$POS,sep = ":")
     flag2=TRUE
     break
   }
   if (flag1&&flag2){
     tmp_merge<-merge(tmp_exo,tmp_xrare,by="CHROM:POS",all = T)
-    tmp_merge<-merge(tmp_merge,tmp_deepPVP,by="CHROM:POS",all = T)
-    tmp_merge[is.na(tmp_merge[,31]),31]<-0
-    tmp_merge[is.na(tmp_merge[,135]),135]<-0
-    score_matrix<-tmp_merge[,c(31,135)]
+    tmp_merge[is.na(tmp_merge[,33]),33]<-0
+    tmp_merge[is.na(tmp_merge[,135]),139]<-0
+    score_matrix<-tmp_merge[,c(33,139)]
     tmp_merge[,"EWE2"]<-EWE2(score_matrix)
   }
   return(tmp_merge)
