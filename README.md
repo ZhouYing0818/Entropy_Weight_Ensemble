@@ -13,7 +13,7 @@
                       xrare_path="./example/xrare/", #The path of Xrare output files
                       exo_path="./example/Exomiser/" #The path of Exomiser output files
   )
-  write.csv(EWE2_output,"EWE2_output.csv",fileEncoding='GB18030',row.names=False) #saving combined results
+  write.csv(EWE2_output,"EWE2_output.csv",fileEncoding='GB18030',row.names=FALSE) #saving combined results
   ~~~
 
 * sourcing "Combined3.R" and "EWE3.R" in R to ensemble Xrare, Exomiser results, for example:
@@ -26,7 +26,7 @@
                       exo_path="./example/Exomiser/", #The path of Exomiser output files
                       deepPVP_path="./example/deepPVP/" #The path of deepPVP files
   )
-  write.csv(EWE3_output,"EWE3_output.csv",fileEncoding='GB18030',row.names=False) #Saving combined results
+  write.csv(EWE3_output,"EWE3_output.csv",fileEncoding='GB18030',row.names=FALSE) #Saving combined results
   ~~~
 
   
