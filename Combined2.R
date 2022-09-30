@@ -1,6 +1,6 @@
 Combined2<-function(rootpath="./",
                     xrare_path="./example/xrare/",
-                    exo_path="./example/exo/"
+                    exo_path="./example/Exomiser/"
 ){
   setwd(rootpath)
   xrare_list<-dir(xrare_path)
