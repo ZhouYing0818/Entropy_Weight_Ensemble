@@ -39,5 +39,9 @@ Combined2<-function(rootpath="./",
     score_matrix<-tmp_merge[,c(33,139)]
     tmp_merge[,"EWE2"]<-EWE2(score_matrix)
   }
+  tmp_merge<-tmp_merge[order(tmp_merge$EWE2,decreasing = T),]
+  tmp_merge<-tmp_merge[!duplicated(tmp_merge$`CHROM:POS`),]
+  tmp_merge<-tmp_merge[,c(12,2:11,33,139,140)]
+  colnames(tmp_merge)<-c("GENE","CHROME","POS","REF","ALT","QUAL","FILTER","GENOTYPE","COVERAGE","FUNCYIONAL_CLASS","HGVS","Exo_SCORE","Xrare_SCORE","EWE2")
   return(tmp_merge)
 }
