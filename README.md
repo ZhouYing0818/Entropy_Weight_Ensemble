@@ -11,7 +11,7 @@
   source("EWE2.R")
   EWE2_output<-Combined2(rootpath="./", 
                       xrare_path="./example/xrare/", #The path of Xrare output files
-                      exo_path="./example/exo/" #The path of Exomiser output files
+                      exo_path="./example/Exomiser/" #The path of Exomiser output files
   )
   write.csv(EWE2_output,"EWE2_output.csv",fileEncoding='GB18030',row.names=False) #saving combined results
   ~~~
@@ -23,7 +23,7 @@
   source("EWE3.R")
   EWE3_output<-Combined3(rootpath="./", 
                       xrare_path="./example/xrare/", #The path of Xrare output files
-                      exo_path="./example/exo/", #The path of Exomiser output files
+                      exo_path="./example/Exomiser/", #The path of Exomiser output files
                       deepPVP_path="./example/deepPVP/" #The path of deepPVP files
   )
   write.csv(EWE3_output,"EWE3_output.csv",fileEncoding='GB18030',row.names=False) #Saving combined results
