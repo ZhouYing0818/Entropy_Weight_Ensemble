@@ -1,6 +1,6 @@
 Combined3<-function(rootpath="./",
                     xrare_path="./example/xrare/",
-                    exo_path="./example/exo/",
+                    exo_path="./example/Exomiser/",
                     deepPVP_path="./example/deepPVP/"
                     ){
   setwd(rootpath)
