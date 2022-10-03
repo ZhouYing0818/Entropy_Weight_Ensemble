@@ -64,7 +64,12 @@ Combined3<-function(rootpath="./",
     }
   tmp_merge<-tmp_merge[order(tmp_merge$EWE3,decreasing = T),]
   tmp_merge<-tmp_merge[!duplicated(tmp_merge$`CHROM:POS`),]
-  tmp_merge<-tmp_merge[,c(12,2:11,33,139,150,151)]
-  colnames(tmp_merge)<-c("GENE","CHROME","POS","REF","ALT","QUAL","FILTER","GENOTYPE","COVERAGE","FUNCYIONAL_CLASS","HGVS","Exomiser_SCORE","Xrare_SCORE","deepPVP_SCORE","EWE3")
+  tmp_merge<-tmp_merge[,c(151,150,139,33,1:32,34:138,140:149)]
+  tmp_colnames<-colnames(tmp_merge)
+  tmp_colnames[4]<-"Exomiser_SCORE"
+  tmp_colnames[3]<-"Xrare_SCORE"
+  tmp_colnames[2]<-"deepPVP_SCORE"
+  tmp_colnames[1]<-"EWE3"
+  colnames(tmp_merge)<-tmp_colnames
   return(tmp_merge)
 }
